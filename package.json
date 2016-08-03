@@ -42,7 +42,13 @@
       "mocha": true
     }
   },
-  "repository": "/generator-inhabit-module-template",
+  "repository": {
+
+    "type": "git",
+
+    "url": "git+https://github.com/WishMasterGit/generator-inhabit-module-template.git"
+
+  },
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
