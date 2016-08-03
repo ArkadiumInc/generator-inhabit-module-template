@@ -7,13 +7,13 @@ module.exports = yeoman.Base.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the hunky-dory ' + chalk.red('generator-inhabit-module-template') + ' generator!'
+      'You are about to install ' + chalk.red('Inhabit module template') + ' make sure that you know what are you doing!'
     ));
 
     var prompts = [{
       type: 'confirm',
       name: 'someAnswer',
-      message: 'Would you like to enable this option?',
+      message: 'I am sure!',
       default: true
     }];
 
