@@ -1,0 +1,26 @@
+{
+  "name": "inhabit-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-size": "^2.1.0",
+    "handlebars": "^4.0.5",
+    "inhabit-module-base": "^1.2.3",
+    "jquery": "^3.1.0",
+    "lodash": "^4.14.1",
+    "require-dir": "^0.3.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0",
+    "stringify": "^5.1.0"
+  }
+}
