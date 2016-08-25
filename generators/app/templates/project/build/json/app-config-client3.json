@@ -1,10 +1,16 @@
 [
   {
+    "id": "ModuleManager",
+    "cfg": {
+      "cdn": "http://localhost:3000/inhabitcfg.json"
+    }
+  },
+  {
     "id": "application",
     "cfg": {
       "cssUrl": ["http://inhabit-widget-features.azurewebsites.net/css/ark-app.css"],
       "cacheTimeSec": "300",
-      "cdnUrl": "http://inhabit-widget-features.azurewebsites.net/"
+      "cdnUrl": "/"
     }
   },
   {
@@ -40,7 +46,7 @@
           "secondPageUrl": "",
           "layoutName": "listPage",
           "_background": "#fff",
-          "presenter": "slotList",
+          "presenter": "contentPresenter",
           "rulesGroup": "inWidget"
         }
       },

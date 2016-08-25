@@ -6,7 +6,7 @@ var config = require('../config');
 
 function build(bundler) {
     console.log('Rebuilding bundle');
-    
+
     return bundler
         .bundle()
         .pipe(source(config.destination.jsOutput))

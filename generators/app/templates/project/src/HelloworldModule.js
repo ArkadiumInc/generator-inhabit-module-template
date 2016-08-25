@@ -17,7 +17,7 @@ var HelloWorld = function (configuration, dependencies) {
 
 HelloWorld.prototype = Object.create(InhabitModuleBase.prototype);
 HelloWorld.prototype.constructor = HelloWorld;
-
+HelloWorld.moduleName = "HelloWorld";
 /**
  * Start async task that fetches content and return a this.deffered.promise()
  * @returns {Promise}
