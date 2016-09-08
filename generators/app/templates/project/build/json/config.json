@@ -1,0 +1,127 @@
+[
+  {
+    "id": "ModuleManager",
+    "cfg": {
+      "cdn": "http://localhost:3000/inhabitcfg.json"
+    }
+  },
+  {
+    "id": "application",
+    "cfg": {
+      "cssUrl": ["http://inhabit-widget-features.azurewebsites.net/css/ark-app.css"],
+      "cacheTimeSec": "300",
+      "cdnUrl": "/"
+    }
+  },
+  {
+    "id": "contentEnd",
+    "cfg": {
+      "playNextTimeOut": 60000
+    }
+  },
+  {
+    "id": "textClassificationService",
+    "cfg": {
+      "providers": [
+        {
+          "id": "alchemy",
+          "url": "//semantic-inhabit.as.arkadiumhosted.com/api/alchemy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "widget",
+    "cfg": [
+      {
+        "id": "widget",
+        "cfg": {
+          "title":"test",
+          "logoVisibility": "collapse",
+          "headerVisibility": false,
+          "secondPageUrl": "",
+          "layoutName": "listPage",
+          "_background": "#fff",
+          "presenter": "contentPresenter",
+          "rulesGroup": "inWidget"
+        }
+      },
+      {
+        "id": "accordion",
+        "cfg": {
+          "title": "Today's features",
+          "secondPageUrl": "",
+          "layoutName": "carouselPage",
+          "background": "E2F0FE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "adsPreroll",
+    "cfg": {
+      "frequency": 0,
+      "providers": [
+        {
+          "id": "adGoogleFlash",
+          "support": [
+            "pc"
+          ]
+        },
+        {
+          "id": "adGoogle",
+          "support": [
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "contentTypes" : ["quizark", "truefalse", "flash", "html5","interactive"]
+    }
+  },
+  {
+    "id": "adGoogle",
+    "cfg": {
+      "clientName": "arkadium.com"
+    }
+  },
+  {
+    "id": "adGoogleFlash",
+    "cfg": {
+      "clientName": "arkadium.com",
+      "timeout": 1000000
+    }
+  },
+  {
+    "id": "appInsight",
+    "cfg": {
+      "enabled": false,
+      "instrumentationKey": ""
+    }
+  },
+  {
+    "id":"popup",
+    "cfg":{
+      "theme":"fullscreen",
+      "customerLogo": {
+        "url": "http://arkadium.everythingzoomer.com/wp-content/themes/zoomers/images/ez_logo_beta.png",
+        "invert": true
+      }
+    }
+  },
+  {
+    "id": "contentPresenter",
+    "cfg": [
+      {
+        "id": "inWidget",
+        "cfg": {
+          "modules": [
+            {
+              "id": "HelloWorld"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
