@@ -117,7 +117,7 @@
         "cfg": {
           "modules": [
             {
-              "id": "HelloWorld"
+              "id": "<%= name %>"
             }
           ]
         }

@@ -1,17 +1,17 @@
 var sources = {
         directory: "./src",
         jsMask: "*.js",
-        jsEntry: "HelloworldModule.js",
+        jsEntry: "<%= name %>Module.js",
         html: "*.html"
     },
     destination = {
         directory: "./build",
         moduleDirectory: "./build/modules",
-        js: "helloWorld.js"
+        js: "<%= name %>.js"
     },
     package = {
         directory: "./package/",
-        file : "HelloWorld.zip"
+        file : "<%= name %>.zip"
     };
 
 module.exports = {

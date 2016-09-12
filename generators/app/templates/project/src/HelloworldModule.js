@@ -1,28 +1,28 @@
 /** @type {InhabitModuleBase} */
 var InhabitModuleBase = require('inhabit-module-base');
 var DefaultConfiguration = require('./defaultConfiguration');
-var helloWorldView = require('./helloWorldView.hbs');
+var <%= name %>View = require('./<%= name %>View.hbs');
 /**
  * @extends {InhabitModuleBase}
  * @param configuration
  * @param dependencies
  * @constructor
  */
-var HelloWorld = function (configuration, dependencies) {
+var <%= name %> = function (configuration, dependencies) {
     this.configuration = dependencies.$.extend(true, {}, DefaultConfiguration);
     this.$ = dependencies.$;
     InhabitModuleBase.prototype.constructor.call(this, configuration, dependencies);
     this.name = this.constructor.name;
 };
 
-HelloWorld.prototype = Object.create(InhabitModuleBase.prototype);
-HelloWorld.prototype.constructor = HelloWorld;
-HelloWorld.moduleName = "HelloWorld";
+<%= name %>.prototype = Object.create(InhabitModuleBase.prototype);
+<%= name %>.prototype.constructor = <%= name %>;
+<%= name %>.moduleName = "<%= name %>";
 /**
  * Start async task that fetches content and return a this.deffered.promise()
  * @returns {Promise}
  */
-HelloWorld.prototype.getContent = function () {
+<%= name %>.prototype.getContent = function () {
     var deferred = this.$.Deferred();
     deferred.resolve(this);
     return deferred.promise();
@@ -32,7 +32,7 @@ HelloWorld.prototype.getContent = function () {
  * Return a Thumbnail URL
  * @returns {string}
  */
-HelloWorld.prototype.getThumbnail = function () {
+<%= name %>.prototype.getThumbnail = function () {
     return "http://i.annihil.us/u/prod/marvel//universe3zx/images/f/f5/IronMan_Head.jpg";
 };
 
@@ -40,14 +40,14 @@ HelloWorld.prototype.getThumbnail = function () {
  * Return a Title
  * @returns {string}
  */
-HelloWorld.prototype.getTitle = function () {
+<%= name %>.prototype.getTitle = function () {
     return "Iron Man";
 };
 
 /**
  * @returns {boolean}
  */
-HelloWorld.prototype.hasContent = function () {
+<%= name %>.prototype.hasContent = function () {
     return true;
 };
 
@@ -55,8 +55,8 @@ HelloWorld.prototype.hasContent = function () {
  * Render content
  * @return {string}
  */
-HelloWorld.prototype.display = function () {
-    var compiledTemplate = this.handlebars.compile(helloWorldView);
+<%= name %>.prototype.display = function () {
+    var compiledTemplate = this.handlebars.compile(<%= name %>View);
 
     return compiledTemplate({greetings:this.configuration.say});
 };
@@ -65,8 +65,8 @@ HelloWorld.prototype.display = function () {
  * Return a Type
  * @returns {string}
  */
-HelloWorld.prototype.getType = function () {
+<%= name %>.prototype.getType = function () {
     return "type"
 };
 
-InhabitModuleBase.publish(HelloWorld);
+InhabitModuleBase.publish(<%= name %>);

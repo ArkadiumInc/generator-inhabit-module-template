@@ -1,3 +1,3 @@
 {
-  "main": "modules/helloWorld.js"
+  "main": "modules/<%= name %>.js"
 }
