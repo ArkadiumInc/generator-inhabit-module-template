@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
-    "publish": "ihpm publish"
+    "build": "webpack",
+    "watch": "webpack-dev-server --content-base public --open --colors --progress",
+    "release": "",
+    "test": "ihpm test",
+    "publish": "ihpm publish",
+    "sourceMap": "source-map-explorer build/modules/nflGuesser.js build/modules/nflGuesser.js.map",
+    "start": "npm run watch"
   },
   "author": "",
   "license": "ISC",
