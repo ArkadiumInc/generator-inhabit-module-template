@@ -10,11 +10,7 @@ module.exports = yeoman.Base.extend({
       'You are about to install ' + chalk.red('Inhabit module template') + ' make sure that you know what are you doing!'
     ));
     this.moduleName = "helloWorld";
-    this.templateReplace =
-    {
-      name:this.moduleName,
-      nameMin:this.moduleName.toLowerCase()
-    };
+
     var prompts = [{
       type: 'input',
       name: 'moduleName',
@@ -26,6 +22,11 @@ module.exports = yeoman.Base.extend({
       // To access props later use this.props.someAnswer;
       this.props = props;
       this.moduleName = props.moduleName;
+      this.templateReplace =
+      {
+        name:this.moduleName,
+        nameMin:this.moduleName.toLowerCase()
+      };
     }.bind(this));
   },
 
