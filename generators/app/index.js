@@ -43,7 +43,7 @@ module.exports = yeoman.Base.extend({
     );
     this.fs.copyTpl(
       this.templatePath('project/webpack.config.js'),
-      this.destinationPath('gulpfile.js'),
+      this.destinationPath('webpack.config.js'),
       this.templateReplace
     );
     this.fs.copyTpl(
