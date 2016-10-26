@@ -31,11 +31,6 @@ module.exports = yeoman.Base.extend({
 
   writing: function () {
     this.fs.copyTpl(
-      this.templatePath('project/build'),
-      this.destinationPath('build'),
-      this.templateReplace
-    );
-    this.fs.copyTpl(
       this.templatePath('project/public'),
       this.destinationPath('public'),
       this.templateReplace
