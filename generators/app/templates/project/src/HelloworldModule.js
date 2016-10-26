@@ -1,5 +1,5 @@
 /** @type {InhabitModuleBase} */
-var InhabitModuleBase = require('inhabit-module-base');
+var InhabitModuleBase = require('inhabit-module-base').InhabitModuleBase;
 var DefaultConfiguration = require('./defaultConfiguration');
 var <%= name %>View = require('./<%= name %>View.hbs');
 /**
