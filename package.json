@@ -1,6 +1,6 @@
 {
   "name": "generator-inhabit-module-template",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "This is template for inhabit modules",
   "homepage": "www.arkadium.com",
   "author": {
@@ -43,11 +43,8 @@
     }
   },
   "repository": {
-
     "type": "git",
-
     "url": "git+https://github.com/WishMasterGit/generator-inhabit-module-template.git"
-
   },
   "scripts": {
     "prepublish": "gulp prepublish",
