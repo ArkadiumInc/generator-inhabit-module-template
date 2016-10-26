@@ -8,7 +8,7 @@ var path = require('path');
 
 
 module.exports = {
-    entry: 'nflGuesserModule',
+    entry: '<%= name %>Module',
     output: { filename: inhabitcfg.main },
     module: {
         loaders: [
