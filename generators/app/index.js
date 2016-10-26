@@ -36,6 +36,11 @@ module.exports = yeoman.Base.extend({
       this.templateReplace
     );
     this.fs.copyTpl(
+      this.templatePath('project/public'),
+      this.destinationPath('public'),
+      this.templateReplace
+    );
+    this.fs.copyTpl(
       this.templatePath('project/src/defaultConfiguration.js'),
       this.destinationPath('src/defaultConfiguration.js'),
       this.templateReplace
