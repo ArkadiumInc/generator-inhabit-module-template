@@ -10,6 +10,11 @@ module.exports = yeoman.Base.extend({
       'You are about to install ' + chalk.red('Inhabit module template') + ' make sure that you know what are you doing!'
     ));
     this.moduleName = "helloWorld";
+    this.templateReplace =
+    {
+      name:this.moduleName,
+      nameMin:this.moduleName.toLowerCase()
+    };
     var prompts = [{
       type: 'input',
       name: 'moduleName',
@@ -28,42 +33,38 @@ module.exports = yeoman.Base.extend({
     this.fs.copyTpl(
       this.templatePath('project/build'),
       this.destinationPath('build'),
-      { name:this.moduleName}
-    );
-    this.fs.copyTpl(
-      this.templatePath('project/gulp'),
-      this.destinationPath('gulp'),
-      { name:this.moduleName}
+      this.templateReplace
     );
     this.fs.copyTpl(
       this.templatePath('project/src/defaultConfiguration.js'),
       this.destinationPath('src/defaultConfiguration.js'),
-      { name:this.moduleName}
+      this.templateReplace
     );
     this.fs.copyTpl(
-      this.templatePath('project/gulpfile.js'),
+      this.templatePath('project/webpack.config.js'),
       this.destinationPath('gulpfile.js'),
-      { name:this.moduleName}
+      this.templateReplace
     );
     this.fs.copyTpl(
       this.templatePath('project/inhabitcfg.json'),
       this.destinationPath('inhabitcfg.json'),
-      { name:this.moduleName}
+      this.templateReplace
     );
     this.fs.copyTpl(
       this.templatePath('project/package.json'),
       this.destinationPath('package.json'),
-      { name:this.moduleName.toLowerCase()}
+      this.templateReplace
     );
+
     this.fs.copyTpl(
       this.templatePath('project/src/HelloworldModule.js'),
       this.destinationPath('src/' + this.moduleName + 'Module.js'),
-      { name:this.moduleName}
+      this.templateReplace
     );
     this.fs.copyTpl(
       this.templatePath('project/src/helloWorldView.hbs'),
       this.destinationPath('src/' + this.moduleName + 'View.hbs'),
-      { name:this.moduleName}
+      this.templateReplace
     );
   },
 

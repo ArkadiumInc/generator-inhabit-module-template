@@ -11,13 +11,14 @@ var <%= name %>View = require('./<%= name %>View.hbs');
 var <%= name %> = function (configuration, dependencies) {
     this.configuration = dependencies.$.extend(true, {}, DefaultConfiguration);
     this.$ = dependencies.$;
+    this.events = dependencies.events;
+
     InhabitModuleBase.prototype.constructor.call(this, configuration, dependencies);
-    this.name = this.constructor.name;
 };
 
 <%= name %>.prototype = Object.create(InhabitModuleBase.prototype);
 <%= name %>.prototype.constructor = <%= name %>;
-<%= name %>.moduleName = "<%= name %>";
+<%= name %>.moduleName = "<%= nameMin %>";
 /**
  * Start async task that fetches content and return a this.deffered.promise()
  * @returns {Promise}
