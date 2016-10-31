@@ -9,11 +9,10 @@ var <%= name %>View = require('./<%= name %>View.hbs');
  * @constructor
  */
 var <%= name %> = function (configuration, dependencies) {
+    InhabitModuleBase.prototype.constructor.call(this, configuration, dependencies);
     this.configuration = dependencies.$.extend(true, {}, DefaultConfiguration);
     this.$ = dependencies.$;
     this.events = dependencies.events;
-
-    InhabitModuleBase.prototype.constructor.call(this, configuration, dependencies);
 };
 
 <%= name %>.prototype = Object.create(InhabitModuleBase.prototype);
@@ -34,7 +33,7 @@ var <%= name %> = function (configuration, dependencies) {
  * @returns {string}
  */
 <%= name %>.prototype.getThumbnail = function () {
-    return "http://i.annihil.us/u/prod/marvel//universe3zx/images/f/f5/IronMan_Head.jpg";
+    return "";
 };
 
 /**
@@ -42,7 +41,7 @@ var <%= name %> = function (configuration, dependencies) {
  * @returns {string}
  */
 <%= name %>.prototype.getTitle = function () {
-    return "Iron Man";
+    return "<%= name %>";
 };
 
 /**
@@ -67,7 +66,7 @@ var <%= name %> = function (configuration, dependencies) {
  * @returns {string}
  */
 <%= name %>.prototype.getType = function () {
-    return "type"
+    return <%= name %>.moduleName;
 };
 
 InhabitModuleBase.publish(<%= name %>);

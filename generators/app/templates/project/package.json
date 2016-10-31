@@ -6,10 +6,6 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack-dev-server --content-base public --open --colors --progress",
-    "release": "",
-    "test": "ihpm test",
-    "publish": "ihpm publish",
-    "sourceMap": "source-map-explorer build/modules/nflGuesser.js build/modules/nflGuesser.js.map",
     "start": "npm run watch"
   },
   "author": "",
@@ -17,14 +13,10 @@
   "devDependencies": {
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.25.0",
-    "handlebars": "^4.0.5",
-    "ihpm": "^0.5.4",
     "inhabit-module-base": "^1.3.13",
-    "jquery": "^3.1.0",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "lodash": "^4.15.0",
     "raw-loader": "^0.5.1",
     "require-dir": "^0.3.0",
     "style-loader": "^0.13.1",
