@@ -6,9 +6,6 @@ var yosay = require('yosay');
 module.exports = yeoman.Base.extend({
   prompting: function () {
     // Have Yeoman greet the user.
-    this.log(yosay(
-      'You are about to install ' + chalk.red('Inhabit module template') + ' make sure that you know what are you doing!'
-    ));
     this.moduleName = "helloWorld";
 
     var prompts = [{
