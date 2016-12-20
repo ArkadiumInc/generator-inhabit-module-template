@@ -1,5 +1,6 @@
 {
   "main":"<%= nameMin %>.js",
+  "resources":"build/resources",
   "preview":"preview.jpg",
   "settings":{
     "title":"<%= name %>",
