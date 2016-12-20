@@ -1,6 +1,6 @@
 {
-  "main":"build/modules/<%= nameMin %>.js",
-  "preview":"preview.png",
+  "main":"<%= nameMin %>.js",
+  "preview":"preview.jpg",
   "settings":{
     "title":"<%= name %>",
     "description":"Description",

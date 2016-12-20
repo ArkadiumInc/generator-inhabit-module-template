@@ -20,7 +20,7 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            { from: 'src/resources', to: 'build/resources' }
+            { from: 'src/resources', to: 'build' }
         ])
     ],
     resolve: {
