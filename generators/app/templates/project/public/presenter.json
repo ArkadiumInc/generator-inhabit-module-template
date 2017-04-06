@@ -18,10 +18,6 @@
     "cfg": {
       "providers": [
         {
-          "id": "indico",
-          "url": "//semantic-inhabit.as.arkadiumhosted.com/api/tags/indico"
-        },
-        {
           "id": "alchemy",
           "url": "//semantic-inhabit.as.arkadiumhosted.com/api/alchemy",
           "prefetchMethods": []
@@ -44,58 +40,8 @@
           "presenter": "contentPresenter",
           "rulesGroup": "inWidget"
         }
-      },
-      {
-        "id": "accordion",
-        "cfg": {
-          "title": "Today's features",
-          "secondPageUrl": "",
-          "layoutName": "carouselPage",
-          "background": "E2F0FE"
-        }
       }
     ]
-  },
-  {
-    "id": "adsPreroll",
-    "cfg": {
-      "frequency": 0,
-      "providers": [
-        {
-          "id": "adGoogleFlash",
-          "support": [
-            "pc"
-          ]
-        },
-        {
-          "id": "adGoogle",
-          "support": [
-            "tablet",
-            "phone"
-          ]
-        }
-      ],
-      "contentTypes" : ["quizark", "truefalse", "flash", "html5","interactive"]
-    }
-  },
-  {
-    "id": "adGoogle",
-    "cfg": {
-      "clientName": "arkadium.com"
-    }
-  },
-  {
-    "id": "adGoogleFlash",
-    "cfg": {
-      "clientName": "arkadium.com",
-      "timeout": 1000000
-    }
-  },
-  {
-    "id": "adStaticGoogle",
-    "cfg": {
-      "clientName": "GreatDayGames"
-    }
   },
   {
     "id": "ga",
